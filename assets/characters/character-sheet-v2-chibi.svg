@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">Chibi pixel character sheet, version two</title>
+  <desc id="desc">Four cute big-headed pixel characters: two friends at school and at age nineteen.</desc>
+  <defs>
+    <style>
+      .o{fill:#3b303a}.h{fill:#29252d}.hl{fill:#51404e}.s{fill:#e9b493}.sh{fill:#cc8273}.e{fill:#5a3652}.w{fill:#fff9fb}.b{fill:#327bca}.bs{fill:#225a9e}.g{fill:#214a3c}.k{fill:#24232a}.d{fill:#28486f}.dl{fill:#3b628f}.p{fill:#f18fae}.l{font:700 19px monospace;fill:#3b303a;letter-spacing:1px}.t{font:15px monospace;fill:#71616e}
+    </style>
+    <pattern id="checks" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#fffafd"/><rect width="8" height="8" fill="#f7eaf1"/><rect x="8" y="8" width="8" height="8" fill="#f7eaf1"/></pattern>
+  </defs>
+  <rect width="1200" height="720" fill="#e9dce6"/>
+  <rect x="30" y="28" width="1140" height="664" rx="24" fill="url(#checks)" stroke="#3b303a" stroke-width="5"/>
+  <text x="66" y="78" class="l">PIXEL BESTIES · CHIBI STUDY</text>
+  <path d="M64 102H1136" stroke="#3b303a" stroke-width="4"/>
+
+  <!-- four mini cards -->
+  <g><rect x="74" y="140" width="246" height="476" rx="18" fill="#e0edff" stroke="#3b303a" stroke-width="4"/><text x="96" y="178" class="l">17</text><text x="96" y="594" class="t">FRIEND · SCHOOL</text></g>
+  <g><rect x="350" y="140" width="246" height="476" rx="18" fill="#e0edff" stroke="#3b303a" stroke-width="4"/><text x="372" y="178" class="l">17</text><text x="372" y="594" class="t">YOU · SCHOOL</text></g>
+  <g><rect x="626" y="140" width="246" height="476" rx="18" fill="#f3e5f1" stroke="#3b303a" stroke-width="4"/><text x="648" y="178" class="l">19</text><text x="648" y="594" class="t">YOU · NOW</text></g>
+  <g><rect x="902" y="140" width="246" height="476" rx="18" fill="#f3e5f1" stroke="#3b303a" stroke-width="4"/><text x="924" y="178" class="l">19</text><text x="924" y="594" class="t">FRIEND · NOW</text></g>
+
+  <!-- friend at 17: giant head, side part, ponytail -->
+  <g aria-label="Chibi friend at seventeen">
+    <!-- high ponytail behind the head -->
+    <path class="o" d="M128 237h76v10h14v18h10v58h-12v20h-84v-22h-12v-58h8z"/><path class="h" d="M136 243h64v12h14v16h8v46h-14v18h-66v-20h-14v-48h8z"/>
+    <!-- face head outline and face -->
+    <path class="o" d="M116 220h92v10h14v18h10v76h-10v18h-14v14h-92v-14h-14v-18h-10v-76h10v-18h14z"/>
+    <path class="s" d="M116 236h92v10h14v70h-14v18h-14v12h-64v-12h-14v-18h-14v-70h14z"/>
+    <!-- side sweep fringe -->
+    <path class="h" d="M110 234h12v-10h78v10h14v16h8v26h-16v-14h-20v16h-18v-14h-18v12h-40z"/>
+    <rect class="hl" x="126" y="238" width="20" height="8"/>
+    <!-- eyes, blush, mouth -->
+    <rect class="e" x="128" y="286" width="16" height="18"/><rect class="w" x="132" y="290" width="6" height="7"/><rect class="e" x="184" y="286" width="16" height="18"/><rect class="w" x="188" y="290" width="6" height="7"/>
+    <rect class="p" x="116" y="310" width="18" height="8"/><rect class="p" x="194" y="310" width="18" height="8"/><rect class="e" x="158" y="316" width="12" height="5"/>
+    <!-- miniature uniform body -->
+    <path class="o" d="M132 358h64v12h12v78h-88v-78h12z"/><path class="b" d="M128 380h72v60h-72z"/><path class="w" d="M132 358h64v32h-64z"/><path class="g" d="M158 366h12l6 12-12 18-12-18z"/><rect class="g" x="158" y="388" width="12" height="22"/>
+    <rect class="s" x="110" y="384" width="18" height="46"/><rect class="s" x="200" y="384" width="18" height="46"/>
+    <rect class="s" x="140" y="448" width="18" height="38"/><rect class="s" x="170" y="448" width="18" height="38"/><rect class="o" x="132" y="482" width="30" height="12"/><rect class="o" x="166" y="482" width="30" height="12"/>
+  </g>
+
+  <!-- you at 17: taller by 6px, centred fringe, big circular glasses -->
+  <g aria-label="Chibi you at seventeen">
+    <path class="o" d="M406 221h78v10h14v18h10v58h-12v20h-86v-22h-12v-58h8z"/><path class="h" d="M414 227h66v12h14v16h8v46h-14v18h-68v-20h-14v-48h8z"/>
+    <path class="o" d="M394 204h94v10h14v18h10v78h-10v18h-14v14h-94v-14h-14v-18h-10v-78h10v-18h14z"/><path class="s" d="M394 220h94v10h14v72h-14v18h-14v12h-66v-12h-14v-18h-14v-72h14z"/>
+    <!-- centre parted fringe -->
+    <path class="h" d="M388 218h12v-10h82v10h14v16h8v28h-18v-16h-24v20h-12v-20h-24v16h-18v-28z"/><rect class="hl" x="406" y="222" width="20" height="8"/>
+    <!-- round glasses -->
+    <path fill="none" stroke="#716875" stroke-width="5" d="M397 278h35v30h-35zM454 278h35v30h-35zM432 292h22"/>
+    <rect class="e" x="410" y="287" width="12" height="14"/><rect class="w" x="414" y="290" width="5" height="5"/><rect class="e" x="464" y="287" width="12" height="14"/><rect class="w" x="468" y="290" width="5" height="5"/>
+    <rect class="p" x="396" y="316" width="18" height="8"/><rect class="p" x="476" y="316" width="18" height="8"/><rect class="e" x="438" y="322" width="12" height="5"/>
+    <path class="o" d="M408 346h64v12h12v84h-88v-84h12z"/><path class="b" d="M404 370h72v64h-72z"/><path class="w" d="M408 346h64v32h-64z"/><path class="g" d="M434 354h12l6 12-12 18-12-18z"/><rect class="g" x="434" y="376" width="12" height="22"/>
+    <rect class="s" x="386" y="374" width="18" height="48"/><rect class="s" x="476" y="374" width="18" height="48"/><rect class="s" x="416" y="442" width="18" height="44"/><rect class="s" x="446" y="442" width="18" height="44"/><rect class="o" x="408" y="482" width="30" height="12"/><rect class="o" x="442" y="482" width="30" height="12"/>
+  </g>
+
+  <!-- you at 19: chest-length hair + off shoulder + flares -->
+  <g aria-label="Chibi you at nineteen">
+    <path class="o" d="M680 208h100v12h10v150h-22v-45h-76v45h-22V220h10z"/><path class="h" d="M688 214h84v14h10v134h-16v-44h-72v44h-16V228h10z"/>
+    <path class="o" d="M682 216h92v10h14v18h10v74h-10v18h-14v14h-92v-14h-14v-18h-10v-74h10v-18h14z"/><path class="s" d="M682 232h92v10h14v68h-14v18h-14v12h-64v-12h-14v-18h-14v-68h14z"/>
+    <path class="h" d="M676 230h12v-10h80v10h14v16h8v28h-18v-16h-24v20h-12v-20h-24v16h-18v-28z"/><rect class="hl" x="694" y="234" width="20" height="8"/>
+    <rect class="e" x="698" y="282" width="16" height="18"/><rect class="w" x="702" y="286" width="6" height="7"/><rect class="e" x="754" y="282" width="16" height="18"/><rect class="w" x="758" y="286" width="6" height="7"/><rect class="p" x="686" y="306" width="18" height="8"/><rect class="p" x="764" y="306" width="18" height="8"/><rect class="e" x="728" y="312" width="12" height="5"/>
+    <!-- off shoulder top -->
+    <path class="o" d="M696 350h64v10h12v80h-88v-80h12z"/><path class="k" d="M692 366h72v66h-72z"/><path class="s" d="M696 350h18v8h28v-8h18v16h-64z"/><rect class="s" x="674" y="374" width="18" height="46"/><rect class="s" x="764" y="374" width="18" height="46"/>
+    <!-- cute flares -->
+    <path class="o" d="M702 432h26v54l-12 12h-30l10-26v-40zm34 0h26v40l10 26h-30l-12-12z"/><path class="d" d="M706 440h14v34l-10 16h-18l14-24zm38 0h14v26l14 24h-18l-10-16z"/><rect class="o" x="686" y="490" width="32" height="10"/><rect class="o" x="750" y="490" width="32" height="10"/>
+  </g>
+
+  <!-- friend at 19: visibly longer hair, sleeveless top + puff skirt -->
+  <g aria-label="Chibi friend at nineteen">
+    <path class="o" d="M954 218h100v12h10v162h-22v-50h-76v50h-22V230h10z"/><path class="h" d="M962 224h84v14h10v146h-16v-50h-72v50h-16V238h10z"/>
+    <path class="o" d="M958 228h92v10h14v18h10v74h-10v18h-14v14h-92v-14h-14v-18h-10v-74h10v-18h14z"/><path class="s" d="M958 244h92v10h14v68h-14v18h-14v12h-64v-12h-14v-18h-14v-68h14z"/>
+    <path class="h" d="M952 242h12v-10h80v10h14v16h8v28h-18v-16h-24v20h-12v-20h-24v16h-18v-28z"/><rect class="hl" x="970" y="246" width="20" height="8"/>
+    <rect class="e" x="974" y="294" width="16" height="18"/><rect class="w" x="978" y="298" width="6" height="7"/><rect class="e" x="1030" y="294" width="16" height="18"/><rect class="w" x="1034" y="298" width="6" height="7"/><rect class="p" x="962" y="318" width="18" height="8"/><rect class="p" x="1040" y="318" width="18" height="8"/><rect class="e" x="1004" y="324" width="12" height="5"/>
+    <!-- sleeveless top and puff skirt -->
+    <path class="o" d="M972 362h64v10h12v68h-88v-68h12z"/><path class="k" d="M968 374h72v58h-72z"/><rect class="k" x="972" y="354" width="16" height="22"/><rect class="k" x="1020" y="354" width="16" height="22"/><rect class="s" x="950" y="380" width="18" height="40"/><rect class="s" x="1040" y="380" width="18" height="40"/>
+    <path class="o" d="M966 430h76l18 18-10 36h-92l-10-36z"/><path class="k" d="M970 438h68l14 14-8 24h-80l-8-24z"/><rect class="sh" x="966" y="468" width="76" height="6"/>
+    <rect class="s" x="980" y="484" width="18" height="22"/><rect class="s" x="1010" y="484" width="18" height="22"/><rect class="o" x="972" y="502" width="30" height="10"/><rect class="o" x="1006" y="502" width="30" height="10"/>
+  </g>
+</svg>

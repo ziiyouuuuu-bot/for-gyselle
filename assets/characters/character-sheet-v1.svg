@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">Two friends, pixel character design sheet</title>
+  <desc id="desc">A character design sheet with a school-age pair and a present-day pair.</desc>
+  <defs>
+    <pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#fffafb"/><rect width="6" height="6" fill="#f5edf2"/><rect x="6" y="6" width="6" height="6" fill="#f5edf2"/></pattern>
+    <style>
+      .ink{fill:#24232a}.hair{fill:#1d1d24}.hairlit{fill:#353640}.skin{fill:#e8b18f}.shade{fill:#c9826d}.white{fill:#fffafa}.blue{fill:#2e75c6}.bluesh{fill:#20569a}.green{fill:#1e4b41}.denim{fill:#244267}.denimlit{fill:#3b5d87}.black{fill:#202027}.skirtsh{fill:#33333c}.silver{fill:#767682}.pink{fill:#f4beca}.label{font:600 18px monospace;letter-spacing:1px;fill:#24232a}.small{font:14px monospace;fill:#69616a}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#f1e8ed"/>
+  <rect x="36" y="32" width="1128" height="656" rx="24" fill="url(#grid)" stroke="#24232a" stroke-width="4"/>
+  <path d="M64 104H1136" stroke="#24232a" stroke-width="4"/>
+  <text x="70" y="78" class="label">OUR PIXEL CHARACTERS · v1</text>
+  <text x="1023" y="78" class="small">48 × 64 GRID</text>
+
+  <!-- stage 1 card -->
+  <rect x="76" y="132" width="498" height="490" rx="12" fill="#fefcff" stroke="#24232a" stroke-width="4"/>
+  <rect x="76" y="132" width="498" height="54" rx="10" fill="#bed5ef"/>
+  <text x="102" y="166" class="label">17 · SCHOOL DAYS</text>
+  <path d="M104 550H546" stroke="#b8b0b6" stroke-width="4"/>
+  <text x="102" y="593" class="small">FRIEND</text><text x="425" y="593" class="small">YOU</text>
+
+  <!-- friend, school: short, side-fringe and high ponytail -->
+  <g aria-label="Friend aged 17 in school uniform">
+    <!-- ponytail behind, side-swept -->
+    <path class="ink" d="M192 264h56v12h12v20h-8v28h-12v16h-36v-16h-12z"/>
+    <path class="hair" d="M196 264h48v16h12v20h-12v24h-36v-16h-12z"/>
+    <!-- legs/shoes -->
+    <rect class="skin" x="194" y="512" width="20" height="38"/><rect class="skin" x="230" y="512" width="20" height="38"/>
+    <rect class="ink" x="186" y="546" width="32" height="12"/><rect class="ink" x="226" y="546" width="32" height="12"/>
+    <!-- arms -->
+    <rect class="skin" x="166" y="398" width="18" height="82"/><rect class="skin" x="260" y="398" width="18" height="82"/>
+    <!-- dress silhouette -->
+    <path class="ink" d="M184 378h76v94l16 44h-108l16-44z"/>
+    <path class="blue" d="M188 386h68v84l12 38h-92l12-38z"/>
+    <path class="bluesh" d="M188 466h68v12h-72z"/>
+    <!-- white shirt and tie -->
+    <path class="white" d="M184 374h76v42h-76z"/><path class="green" d="M218 382h12l6 16-12 24-12-24z"/>
+    <rect class="green" x="218" y="402" width="12" height="30"/>
+    <!-- face border / face -->
+    <rect class="ink" x="184" y="286" width="76" height="100"/>
+    <rect class="skin" x="192" y="298" width="60" height="76"/>
+    <rect class="shade" x="192" y="354" width="60" height="20"/>
+    <!-- fringe: clearly side-parted -->
+    <path class="hair" d="M188 286h68v16h8v30h-20v-14h-16v10h-16v-16h-24z"/>
+    <rect class="hairlit" x="196" y="294" width="16" height="8"/>
+    <!-- face -->
+    <rect class="ink" x="204" y="334" width="8" height="8"/><rect class="ink" x="236" y="334" width="8" height="8"/>
+    <rect class="pink" x="216" y="350" width="16" height="4"/>
+  </g>
+
+  <!-- you, school: taller, centre part, round glasses, high ponytail -->
+  <g aria-label="You aged 17 in school uniform">
+    <!-- ponytail behind -->
+    <path class="ink" d="M406 240h60v12h12v24h-8v32h-12v16h-44v-16h-8z"/><path class="hair" d="M410 244h52v16h12v16h-12v28h-40v-16h-12z"/>
+    <!-- legs/shoes -->
+    <rect class="skin" x="410" y="512" width="20" height="38"/><rect class="skin" x="446" y="512" width="20" height="38"/>
+    <rect class="ink" x="402" y="546" width="32" height="12"/><rect class="ink" x="442" y="546" width="32" height="12"/>
+    <!-- arms/dress -->
+    <rect class="skin" x="382" y="390" width="18" height="90"/><rect class="skin" x="476" y="390" width="18" height="90"/>
+    <path class="ink" d="M400 370h76v102l16 44h-108l16-44z"/><path class="blue" d="M404 378h68v92l12 38h-92l12-38z"/><path class="bluesh" d="M404 466h68v12h-72z"/>
+    <path class="white" d="M400 366h76v42h-76z"/><path class="green" d="M434 374h12l6 16-12 24-12-24z"/><rect class="green" x="434" y="394" width="12" height="34"/>
+    <!-- centre-part face + hair -->
+    <rect class="ink" x="400" y="270" width="76" height="100"/><rect class="skin" x="408" y="282" width="60" height="76"/><rect class="shade" x="408" y="338" width="60" height="20"/>
+    <path class="hair" d="M404 270h68v12h8v34h-16v-18h-20v22h-12v-22h-20v18h-16v-34h8z"/>
+    <rect class="hairlit" x="412" y="278" width="16" height="8"/>
+    <!-- glasses -->
+    <path fill="none" stroke="#767682" stroke-width="4" d="M410 322h22v20h-22zM444 322h22v20h-22zM432 330h12"/>
+    <rect class="ink" x="416" y="330" width="6" height="6"/><rect class="ink" x="454" y="330" width="6" height="6"/><rect class="pink" x="430" y="346" width="16" height="4"/>
+  </g>
+
+  <!-- stage 2 card -->
+  <rect x="626" y="132" width="498" height="490" rx="12" fill="#fefcff" stroke="#24232a" stroke-width="4"/>
+  <rect x="626" y="132" width="498" height="54" rx="10" fill="#d9c5dc"/>
+  <text x="652" y="166" class="label">19 · NOW</text>
+  <path d="M654 550H1096" stroke="#b8b0b6" stroke-width="4"/>
+  <text x="676" y="593" class="small">YOU</text><text x="1000" y="593" class="small">FRIEND</text>
+
+  <!-- you, 19: chest-length centre part, off shoulder, flares -->
+  <g aria-label="You aged 19 in off shoulder top and flared jeans">
+    <!-- long hair behind -->
+    <path class="ink" d="M726 264h76v12h8v164h-20v-42h-52v42h-20V276h8z"/><path class="hair" d="M730 268h68v16h8v148h-12v-42h-60v42h-12V284h8z"/>
+    <!-- legs and flared jeans -->
+    <path class="ink" d="M742 472h24v54h-8l-8 24h-24l8-34v-44zm28 0h24v44l8 34h-24l-8-24h-8z"/>
+    <path class="denim" d="M746 476h16v42l-8 24h-20l8-28v-38zm28 0h16v38l8 28h-20l-8-24v-42z"/><rect class="denimlit" x="750" y="486" width="8" height="28"/>
+    <rect class="ink" x="730" y="540" width="30" height="10"/><rect class="ink" x="778" y="540" width="30" height="10"/>
+    <!-- arms/top -->
+    <rect class="skin" x="710" y="390" width="18" height="78"/><rect class="skin" x="806" y="390" width="18" height="78"/>
+    <path class="ink" d="M728 394h78v84h-78z"/><path class="black" d="M732 402h70v68h-70z"/>
+    <!-- off shoulder skin line -->
+    <path class="skin" d="M732 394h18v8h34v-8h18v14h-70z"/>
+    <!-- face, long centre hair -->
+    <rect class="ink" x="726" y="278" width="80" height="104"/><rect class="skin" x="734" y="290" width="64" height="76"/><rect class="shade" x="734" y="346" width="64" height="20"/>
+    <path class="hair" d="M730 278h72v12h8v34h-16v-18h-22v22h-12v-22h-22v18h-16v-34h8z"/><rect class="hairlit" x="738" y="286" width="16" height="8"/>
+    <rect class="ink" x="746" y="334" width="8" height="8"/><rect class="ink" x="778" y="334" width="8" height="8"/><rect class="pink" x="758" y="350" width="16" height="4"/>
+  </g>
+
+  <!-- friend, 19: longer hair, sleeveless top, puff skirt -->
+  <g aria-label="Friend aged 19 in sleeveless top and puff skirt">
+    <!-- hair, 4px longer than yours -->
+    <path class="ink" d="M946 282h80v12h8v166h-20v-48h-56v48h-20V294h8z"/><path class="hair" d="M950 286h72v16h8v150h-12v-48h-64v48h-12V302h8z"/>
+    <!-- legs/shoes -->
+    <rect class="skin" x="962" y="510" width="20" height="40"/><rect class="skin" x="998" y="510" width="20" height="40"/>
+    <rect class="ink" x="954" y="546" width="32" height="12"/><rect class="ink" x="994" y="546" width="32" height="12"/>
+    <!-- arms and sleeveless top -->
+    <rect class="skin" x="934" y="394" width="18" height="74"/><rect class="skin" x="1028" y="394" width="18" height="74"/>
+    <path class="ink" d="M952 394h76v82h-76z"/><path class="black" d="M956 402h68v66h-68z"/>
+    <!-- shoulder straps (sleeveless identifier) -->
+    <rect class="black" x="956" y="388" width="16" height="18"/><rect class="black" x="1008" y="388" width="16" height="18"/>
+    <!-- puffy skirt -->
+    <path class="ink" d="M952 468h76l18 20-10 30H944l-10-30z"/><path class="black" d="M956 474h68l14 18-8 18h-80l-8-18z"/><path class="skirtsh" d="M950 502h80v8h-80z"/>
+    <!-- face -->
+    <rect class="ink" x="946" y="290" width="80" height="104"/><rect class="skin" x="954" y="302" width="64" height="76"/><rect class="shade" x="954" y="358" width="64" height="20"/>
+    <path class="hair" d="M950 290h72v12h8v34h-16v-18h-22v22h-12v-22h-22v18h-16v-34h8z"/><rect class="hairlit" x="958" y="298" width="16" height="8"/>
+    <rect class="ink" x="966" y="346" width="8" height="8"/><rect class="ink" x="998" y="346" width="8" height="8"/><rect class="pink" x="978" y="362" width="16" height="4"/>
+  </g>
+</svg>
