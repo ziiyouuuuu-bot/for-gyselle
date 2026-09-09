@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171721" />
+  <title>for gyselle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="gate" class="gate" aria-labelledby="gate-title">
+    <div class="gate-orbit orbit-one"></div><div class="gate-orbit orbit-two"></div>
+    <section class="lock-card">
+      <p class="eyebrow">PRIVATE MEMORY ARCHIVE · 01</p>
+      <div class="lock-icon" aria-hidden="true"><span></span></div>
+      <h1 id="gate-title">only for<br />Gyselle</h1>
+      <p class="gate-copy">输入六位密码，解锁一段<br />仍在向前延伸的故事。</p>
+      <form id="password-form" novalidate>
+        <label class="sr-only" for="password">六位密码</label>
+        <input id="password" name="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="· · · · · ·" />
+        <button type="submit">OPEN ARCHIVE <span>↗</span></button>
+        <p id="password-error" class="error" aria-live="polite"></p>
+      </form>
+      <p class="microcopy">A small world for the two of you.</p>
+    </section>
+  </main>
+
+  <main id="archive" class="archive hidden" aria-label="黄子又和李涵悉的生日记忆网站">
+    <header class="topbar">
+      <a class="wordmark" href="#intro">Y × L <span>ARCHIVE</span></a>
+      <p id="chapter-label">01 / 08 · THE BEGINNING</p>
+      <div class="controls"><button id="previous" aria-label="上一站">←</button><button id="next" aria-label="下一站">→</button></div>
+    </header>
+
+    <div id="track" class="track">
+      <section id="intro" class="panel intro-panel" data-chapter="01 / 08 · THE BEGINNING">
+        <div class="intro-stars" aria-hidden="true">✦　·　✧　·　✦</div>
+        <p class="eyebrow">200? → NOW → ∞</p>
+        <h2>关于黄子又<br />和李涵悉。</h2>
+        <p class="large-copy">一段从中学开始，<br />还在慢慢向右延伸的友情。</p>
+        <span class="scroll-note">SCROLL / SWIPE TO EXPLORE →</span>
+      </section>
+
+      <section class="panel story-panel school one" data-chapter="02 / 08 · AGE 15">
+        <div class="stage-number">01</div>
+        <div class="story-copy"><p class="eyebrow">AGE 15 · 点头之交</p><h2>故事从一个<br />“一起吃东西吗？”<br />开始。</h2><p>同一天 duty，让两条原本陌生的轨迹重叠。一个看似再普通不过的询问，后来慢慢把“我”和“你”变成了“我们”。</p></div>
+        <div class="scene scene-distant"><span class="label-pill">SCHOOL DAYS</span><img src="assets/characters/school-pair.png" alt="中学时期的朋友和你，朋友在左，你在右" /></div>
+      </section>
+
+      <section class="panel story-panel school two" data-chapter="03 / 08 · AGE 16">
+        <div class="stage-number">02</div>
+        <div class="scene scene-close"><span class="floating-note n1">library</span><span class="floating-note n2">LRT</span><span class="floating-note n3">记者营</span><img src="assets/characters/school-pair.png" alt="中学时期的朋友和你" /></div>
+        <div class="story-copy"><p class="eyebrow">AGE 16 · 好朋友</p><h2>这一年太长，<br />长得我们并肩走了<br />很久很久。</h2><p>图书馆、记者营、留校、LRT、生日和那些很辛苦的时刻。我们在彼此有所成就时站在身边，也在疲惫时成为后盾。</p></div>
+      </section>
+
+      <section class="panel story-panel school three" data-chapter="04 / 08 · AGE 17">
+        <div class="stage-number">03</div>
+        <div class="story-copy"><p class="eyebrow">AGE 17 · 闺蜜 & 工作伙伴</p><h2>如果不能提及你，<br />就无法完整地描述<br />我的中学生涯。</h2><p>学校里抬头不见低头见，回家后也有长长的语音。公事和私事，都占据着彼此很大很大的部分。</p></div>
+        <div class="scene scene-together"><span class="label-pill">SAME TEAM</span><img src="assets/characters/school-pair.png" alt="中学时期的朋友和你并肩出现" /></div>
+      </section>
+
+      <section class="panel story-panel present four" data-chapter="05 / 08 · AGE 18–19">
+        <div class="stage-number">04</div>
+        <div class="scene scene-now"><span class="promise p1">travel</span><span class="promise p2">be better</span><span class="promise p3">love ourselves</span><img src="assets/characters/present-pair.png" alt="现在的你和朋友，你在左，朋友在右" /></div>
+        <div class="story-copy"><p class="eyebrow">AGE 18–19 · 仍然是我们</p><h2>生活不同了，<br />但我们还是我们。</h2><p>各自上大学、各自经历瓶颈，也各自开始拥有生活和收入。可是约定没有停下：一起变漂亮、变好、去旅行、很久很久地陪伴彼此。</p></div>
+      </section>
+
+      <section id="qna" class="panel qna-panel" data-chapter="06 / 08 · Q&A">
+        <div class="qna-intro"><p class="eyebrow">PRIVATE INVITATIONS · 30</p><h2>关于李涵悉，<br />我会说……</h2><p>点击一张邀请函，答案才会出现。</p></div>
+        <div id="question-grid" class="question-grid" aria-live="polite"></div>
+        <dialog id="answer-dialog" class="answer-dialog"><button class="dialog-close" aria-label="关闭答案">×</button><p class="eyebrow" id="dialog-index"></p><h3 id="dialog-question"></h3><p id="dialog-answer"></p><span>Y × L · PRIVATE INVITATION</span></dialog>
+      </section>
+
+      <section id="goals" class="panel goals-panel" data-chapter="07 / 08 · FUTURE FILES">
+        <div class="goals-heading"><p class="eyebrow">FUTURE FILES · TOGETHER</p><h2>还想和你<br />一起做到的事。</h2><p>不是待办清单，是我们会慢慢填满的未来。</p></div>
+        <div class="goal-window">
+          <div class="window-bar"><i></i><i></i><i></i><span>shared_future.exe</span></div>
+          <article class="goal-card c1"><span>01</span><h3>变有钱</h3><p>靠自己的努力，把喜欢变成可以拥有。</p><b>WISHING</b></article>
+          <article class="goal-card c2"><span>02</span><h3>变漂亮</h3><p>一起变好，也更认真地爱自己。</p><b>ONGOING</b></article>
+          <article class="goal-card c3"><span>03</span><h3>买 YSL</h3><p>把曾经想要的，送给长大后的我们。</p><b>WISHING</b></article>
+          <article class="goal-card c4"><span>04</span><h3>一起旅行</h3><p>拍很多漂亮的照片，看更多新的地方。</p><b>LOADING</b></article>
+        </div>
+      </section>
+
+      <section class="panel outro-panel" data-chapter="08 / 08 · TO BE CONTINUED">
+        <p class="eyebrow">END? NOT REALLY.</p><h2>故事待续，<br />来日方长。</h2><p>愿我们永远有向前的勇气和力量，<br />也能时时相伴于彼此身旁。</p><div class="outro-line" aria-hidden="true"><span></span><i>✦</i><span></span></div><small>Y × L · 2026</small>
+      </section>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
