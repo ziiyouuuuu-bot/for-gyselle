@@ -30,6 +30,27 @@ const questions = [
 ['给她颁发一个奖项？','回复信息最慢奖。'],
 ['对十年后的她说一句话？','如果你开始质疑自己，不妨想想十年前的你，她绝对不会嫌弃现在的你，所以你也不行。'],
 ['意识到自己很爱她的一个瞬间？','她坐在我对面，我静静地望着她的时候。']
+['她最值得被别人知道的一件事是什么？','她其实比想象中要勇敢很多。很多时候她不是不害怕，只是需要一点点的回应，或者支持。希望她以后不要只记得自己的狼狈，也记得自己曾经是怎么一步一步走到今天的。'],
+['如果我们以后同居，我觉得我们最常一起做什么？','看电影吧。现在的我们都会觉得约一次很不容易，大概率不想把时间都花在电影院。但同居就不同了，我们有很多很多时间，可以一起看很多很多电影，再做很多很多事情。'],
+['如果我们很久没有见面，再见的时候会是什么样？','拥抱。所有汹涌的情感、累积的思念、复杂的情绪，一个拥抱就可以传递给彼此了。'],
+['如果我们的友情是一部电影，名字是？','很难决定诶，我觉得简单的《我们》就很好。“我们”这个词的分量其实很重，至少在我心中。代表我们是利益共同体，是不分你我的关系，是可以被一起提起的关系，是不会介意彼此的关系。'],
+['我们之间有什么共同点？','都是颜控。'],
+['如果我们的友情可以具象化成一个东西，会是什么？','一条很长很长的线。中间可能会有打结、绕路、暂时拉开距离的时候，但始终没有真正断掉，而且还在不断往前延伸。'],
+['我觉得她最适合过怎样的人生？','有钱、有选择权、有很多喜欢的人和事，也有足够的底气拒绝自己不喜欢的一切。不是一定要成为多厉害的人，而是她可以按照自己的意愿决定自己要怎么活。'],
+['如果我们一起开一家店，会是什么店？','一家看起来很贵但其实不知道在卖什么的店。可能卖咖啡、衣服、香水，也可能什么都卖一点。重点不是店卖什么，重点是我们两个一定会为了装修、包装和店名吵很多次。'],
+['如果把我们的友情拍成电影，类型是什么？','轻喜剧吧。虽然中间可能会有一点青春疼痛文学、一点成长、一点眼泪，但最后回头看，大概还是会觉得——这两个人怎么可以这么好笑。'],
+['如果我们有一天一起实现了很多以前说过的愿望，我希望那天我们会做什么？','坐下来慢慢回忆以前说过的那些话，然后发现原来真的一件一件做到了。可能会笑自己以前怎么敢想这么多，也会庆幸当时的我们没有觉得那些愿望太遥远。'],
+['她最需要被提醒的一件事情？','不要因为暂时没有得到自己想要的东西，就觉得自己不够有能力。人生本来就无常，不是每一件事情都会按照计划发生，但这不代表她不够好。'],
+['如果有一天我们真的变成了很老很老的朋友，我希望我们还保留什么？','分享欲。'],
+['我们之间最无厘头的一次对话是什么？','简直太多了。聊天记录随便翻一翻，就出来了。'],
+['如果她突然获得了很多钱，我觉得她第一件事会做什么？','1.开心。 2.跟我说。 3.存一部分。 4.买掉所有想买的东西。 5.包几个男大。'],
+['如果我们交换一天的人生，最想体验对方什么？','想看看她眼里的世界到底是什么样的，想体验真正的campus life，也想看看她的视角里面的我是什么样的。'],
+['她什么时候最像长不大的小孩？','她有时候会说“我不管！”，或者对我萌萌地笑。'],
+['如果以后我们各自拥有了完全不同的人生，我最希望什么不要改变？','不会需要用“曾经很好的朋友”来提起对方。我希望我们一直都是现在进行式，而不是某一天回头看才发现原来我们曾经那么要好，然后开始无止尽的惋惜。'],
+['有没有一句话是我觉得她应该永远记住的？','你值得很多爱，和很多幸福。你只需要是你，就值得拥有你该拥有的一切。'],
+['如果我们真的老了，我觉得我们会聊什么？','聊以前。聊年轻的时候做过的蠢事、聊那些曾经觉得天大的烦恼、聊以前喜欢过的人，也聊我们当年到底为什么可以为了一个很小的事情笑那么久。然后可能会发现，我们其实已经认识彼此大半辈子了。'],
+['如果我们的友情一定会有结局，最后的画面会是什么？','其中一方出现另一方的葬礼。'],
+['一句话总结我们这么多年的友情？','未完待续。']
 ];
 
 const gate = document.querySelector('#gate');
@@ -48,5 +69,5 @@ track.addEventListener('wheel',event=>{if(Math.abs(event.deltaY)>Math.abs(event.
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)chapter.textContent=entry.target.dataset.chapter;}),{root:track,threshold:.58});panels.forEach(panel=>observer.observe(panel));
 
 const grid=document.querySelector('#question-grid'); const dialog=document.querySelector('#answer-dialog');
-questions.forEach(([q],index)=>{const card=document.createElement('button');card.type='button';card.innerHTML=`<b>INVITATION ${String(index+1).padStart(2,'0')}</b><span>${q}</span>`;card.addEventListener('click',()=>{document.querySelector('#dialog-index').textContent=`PRIVATE INVITATION ${String(index+1).padStart(2,'0')} / 30`;document.querySelector('#dialog-question').textContent=q;document.querySelector('#dialog-answer').textContent=questions[index][1];dialog.showModal();});grid.append(card);});
+questions.forEach(([q],index)=>{const card=document.createElement('button');card.type='button';card.innerHTML=`<b>INVITATION ${String(index+1).padStart(2,'0')}</b><span>${q}</span>`;card.addEventListener('click',()=>{document.querySelector('#dialog-index').textContent=`PRIVATE INVITATION ${String(index+1).padStart(2,'0')} / 50`;document.querySelector('#dialog-question').textContent=q;document.querySelector('#dialog-answer').textContent=questions[index][1];dialog.showModal();});grid.append(card);});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
