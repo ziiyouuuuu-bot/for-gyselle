@@ -48,7 +48,7 @@ const questions = [
 ['如果以后我们各自拥有了完全不同的人生，我最希望什么不要改变？','不会需要用“曾经很好的朋友”来提起对方。我希望我们一直都是现在进行式，而不是某一天回头看才发现原来我们曾经那么要好，然后开始无止尽的惋惜。'],
 ['有没有一句话是我觉得她应该永远记住的？','你值得很多爱，和很多幸福。你只需要是你，就值得拥有你该拥有的一切。'],
 ['如果我们真的老了，我觉得我们会聊什么？','聊以前。聊年轻的时候做过的蠢事、聊那些曾经觉得天大的烦恼、聊以前喜欢过的人，也聊我们当年到底为什么可以为了一个很小的事情笑那么久。然后可能会发现，我们其实已经认识彼此大半辈子了。'],
-['如果我们的友情一定会有结局，最后的画面会是什么？','其中一方出现另一方的葬礼。'],
+['如果我们的友情一定会有结局，最后的画面会是什么？','其中一方出席另一方的葬礼。'],
 ['一句话总结我们这么多年的友情？','未完待续。']
 ];
 
@@ -70,3 +70,96 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 const grid=document.querySelector('#question-grid'); const dialog=document.querySelector('#answer-dialog');
 questions.forEach(([q],index)=>{const card=document.createElement('button');card.type='button';card.innerHTML=`<b>INVITATION ${String(index+1).padStart(2,'0')}</b><span>${q}</span>`;card.addEventListener('click',()=>{document.querySelector('#dialog-index').textContent=`PRIVATE INVITATION ${String(index+1).padStart(2,'0')} / ${questions.length}`;document.querySelector('#dialog-question').textContent=q;document.querySelector('#dialog-answer').textContent=questions[index][1];dialog.showModal();});grid.append(card);});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+const saveQna = document.querySelector('#save-qna');
+
+saveQna.addEventListener('click', async () => {
+  saveQna.textContent = 'CREATING IMAGE...';
+  saveQna.disabled = true;
+
+  const exportBox = document.createElement('div');
+
+  exportBox.style.position = 'fixed';
+  exportBox.style.left = '-10000px';
+  exportBox.style.top = '0';
+  exportBox.style.width = '900px';
+  exportBox.style.padding = '70px';
+  exportBox.style.background = '#171721';
+  exportBox.style.color = '#ffffff';
+  exportBox.style.fontFamily = 'Noto Sans SC, sans-serif';
+  exportBox.style.boxSizing = 'border-box';
+
+  exportBox.innerHTML = `
+    <div style="text-align:center;margin-bottom:50px;">
+      <div style="font-family:DM Mono,monospace;font-size:12px;letter-spacing:3px;opacity:.6;margin-bottom:18px;">
+        PRIVATE MEMORY ARCHIVE · Q&A
+      </div>
+      <h1 style="font-size:42px;margin:0 0 12px;">
+        关于李涵悉，<br />我会说……
+      </h1>
+      <p style="font-size:14px;opacity:.6;">
+        hanxi x ziyou · PRIVATE INVITATION
+      </p>
+    </div>
+  `;
+
+  questions.forEach(([question, answer], index) => {
+    const item = document.createElement('div');
+
+    item.style.padding = '28px 0';
+    item.style.borderTop = '1px solid rgba(255,255,255,.15)';
+
+    item.innerHTML = `
+      <div style="
+        font-family:DM Mono,monospace;
+        font-size:11px;
+        letter-spacing:2px;
+        opacity:.5;
+        margin-bottom:10px;
+      ">
+        PRIVATE INVITATION ${String(index + 1).padStart(2, '0')} / ${questions.length}
+      </div>
+
+      <div style="
+        font-size:20px;
+        font-weight:600;
+        line-height:1.5;
+        margin-bottom:12px;
+      ">
+        ${question}
+      </div>
+
+      <div style="
+        font-size:15px;
+        line-height:2;
+        opacity:.82;
+      ">
+        ${answer}
+      </div>
+    `;
+
+    exportBox.appendChild(item);
+  });
+
+  document.body.appendChild(exportBox);
+
+  try {
+    const canvas = await html2canvas(exportBox, {
+      backgroundColor: '#171721',
+      scale: 2,
+      useCORS: true
+    });
+
+    const link = document.createElement('a');
+    link.download = 'hanxi-x-ziyou-qna.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch (error) {
+    console.error(error);
+    alert('图片生成失败，请再试一次。');
+  }
+
+  exportBox.remove();
+
+  saveQna.textContent = 'SAVE AS IMAGE ↗';
+  saveQna.disabled = false;
+});
