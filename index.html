@@ -69,7 +69,12 @@
       </section>
 
       <section id="qna" class="panel qna-panel" data-chapter="06 / 08 · Q&A">
-        <div class="qna-intro"><p class="eyebrow">PRIVATE INVITATIONS · 50</p><h2>关于李涵悉，<br />我会说……</h2><p>点击一张邀请函，答案才会出现。</p></div>
+<div class="qna-intro">
+  <p class="eyebrow">PRIVATE INVITATIONS · 50</p>
+  <h2>关于李涵悉，<br />我会说……</h2>
+  <p>点击一张邀请函，答案才会出现。</p>
+  <button id="save-qna" class="save-qna">SAVE AS IMAGE ↗</button>
+</div>
         <div id="question-grid" class="question-grid" aria-live="polite"></div>
         <dialog id="answer-dialog" class="answer-dialog"><button class="dialog-close" aria-label="关闭答案">×</button><p class="eyebrow" id="dialog-index"></p><h3 id="dialog-question"></h3><p id="dialog-answer"></p><span>hanxi x ziyou · PRIVATE INVITATION</span></dialog>
       </section>
@@ -90,6 +95,7 @@
       </section>
     </div>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
