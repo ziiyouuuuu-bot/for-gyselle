@@ -70,11 +70,93 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 const grid=document.querySelector('#question-grid'); const dialog=document.querySelector('#answer-dialog');
 questions.forEach(([q],index)=>{const card=document.createElement('button');card.type='button';card.innerHTML=`<b>INVITATION ${String(index+1).padStart(2,'0')}</b><span>${q}</span>`;card.addEventListener('click',()=>{document.querySelector('#dialog-index').textContent=`PRIVATE INVITATION ${String(index+1).padStart(2,'0')} / ${questions.length}`;document.querySelector('#dialog-question').textContent=q;document.querySelector('#dialog-answer').textContent=questions[index][1];dialog.showModal();});grid.append(card);});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
-const saveQna = document.querySelector('#save-qna');
+const saveAllQna = document.querySelector('#save-all-qna');
+const saveAnyQna = document.querySelector('#save-any-qna');
 
-saveQna.addEventListener('click', async () => {
-  saveQna.textContent = 'CREATING IMAGE...';
-  saveQna.disabled = true;
+async function createQnaImage(question, answer, index) {
+  const exportBox = document.createElement('div');
+
+  exportBox.style.position = 'fixed';
+  exportBox.style.left = '-10000px';
+  exportBox.style.top = '0';
+  exportBox.style.width = '900px';
+  exportBox.style.padding = '70px';
+  exportBox.style.background = '#171721';
+  exportBox.style.color = '#ffffff';
+  exportBox.style.fontFamily = 'Noto Sans SC, sans-serif';
+  exportBox.style.boxSizing = 'border-box';
+
+  exportBox.innerHTML = `
+    <div style="text-align:center;margin-bottom:50px;">
+      <div style="font-family:DM Mono,monospace;font-size:12px;letter-spacing:3px;opacity:.6;margin-bottom:18px;">
+        PRIVATE MEMORY ARCHIVE · Q&A
+      </div>
+
+      <h1 style="font-size:42px;margin:0 0 12px;">
+        关于李涵悉，<br />我会说……
+      </h1>
+
+      <p style="font-size:14px;opacity:.6;">
+        hanxi x ziyou · PRIVATE INVITATION
+      </p>
+    </div>
+
+    <div style="padding:28px 0;border-top:1px solid rgba(255,255,255,.15);">
+      <div style="
+        font-family:DM Mono,monospace;
+        font-size:11px;
+        letter-spacing:2px;
+        opacity:.5;
+        margin-bottom:10px;
+      ">
+        PRIVATE INVITATION ${String(index + 1).padStart(2, '0')} / ${questions.length}
+      </div>
+
+      <div style="
+        font-size:20px;
+        font-weight:600;
+        line-height:1.5;
+        margin-bottom:12px;
+      ">
+        ${question}
+      </div>
+
+      <div style="
+        font-size:15px;
+        line-height:2;
+        opacity:.82;
+      ">
+        ${answer}
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(exportBox);
+
+  try {
+    const canvas = await html2canvas(exportBox, {
+      backgroundColor: '#171721',
+      scale: 2,
+      useCORS: true
+    });
+
+    const link = document.createElement('a');
+    link.download = `hanxi-x-ziyou-qna-${String(index + 1).padStart(2, '0')}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch (error) {
+    console.error(error);
+    alert('图片生成失败，请再试一次。');
+  }
+
+  exportBox.remove();
+}
+
+
+/* SAVE ALL */
+saveAllQna.addEventListener('click', async () => {
+  saveAllQna.textContent = 'CREATING IMAGE...';
+  saveAllQna.disabled = true;
 
   const exportBox = document.createElement('div');
 
@@ -93,9 +175,11 @@ saveQna.addEventListener('click', async () => {
       <div style="font-family:DM Mono,monospace;font-size:12px;letter-spacing:3px;opacity:.6;margin-bottom:18px;">
         PRIVATE MEMORY ARCHIVE · Q&A
       </div>
+
       <h1 style="font-size:42px;margin:0 0 12px;">
         关于李涵悉，<br />我会说……
       </h1>
+
       <p style="font-size:14px;opacity:.6;">
         hanxi x ziyou · PRIVATE INVITATION
       </p>
@@ -150,7 +234,7 @@ saveQna.addEventListener('click', async () => {
     });
 
     const link = document.createElement('a');
-    link.download = 'hanxi-x-ziyou-qna.png';
+    link.download = 'hanxi-x-ziyou-qna-all.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
   } catch (error) {
@@ -160,6 +244,37 @@ saveQna.addEventListener('click', async () => {
 
   exportBox.remove();
 
-  saveQna.textContent = 'SAVE AS IMAGE ↗';
-  saveQna.disabled = false;
+  saveAllQna.textContent = 'SAVE ALL AS IMAGE ↗';
+  saveAllQna.disabled = false;
+});
+
+
+/* SAVE ANY QUESTION */
+saveAnyQna.addEventListener('click', () => {
+  const choice = prompt(
+    `请输入想保存的题目号码（1-${questions.length}）：`
+  );
+
+  if (choice === null) return;
+
+  const number = Number(choice);
+
+  if (
+    !Number.isInteger(number) ||
+    number < 1 ||
+    number > questions.length
+  ) {
+    alert(`请输入 1-${questions.length} 之间的题目号码。`);
+    return;
+  }
+
+  const [question, answer] = questions[number - 1];
+
+  saveAnyQna.textContent = 'CREATING IMAGE...';
+  saveAnyQna.disabled = true;
+
+  createQnaImage(question, answer, number - 1).finally(() => {
+    saveAnyQna.textContent = 'SAVE ANY QUESTION ↗';
+    saveAnyQna.disabled = false;
+  });
 });
